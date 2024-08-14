@@ -1,3 +1,5 @@
+import removeURL from "./urlRemover.js";
+
 export default class Char {
   constructor(head, beard, glass) {
     this.face = head;
@@ -11,7 +13,11 @@ export default class Char {
     }
   }
 
-  changeAtribute(dir, , faceOrBeard) {
-
+  changeAtribute(dir, newAtribute, type) {
+    if (type == "face") {
+      this.face.src = newAtribute;
+    } else {
+      this.beard.src = newAtribute;
+    }
   }
 }
