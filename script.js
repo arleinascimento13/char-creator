@@ -1,10 +1,5 @@
 import Char from "./funcs/constructorChar.js";
-
-function removeURL(url) {
-  let urlObj = new URL(url, window.location.origin);
-  let path = urlObj.pathname;
-  return path;
-}
+import removeURL from "./funcs/urlRemover.js";
 
 function setDefaultChar() {
   const char = new Char();
@@ -18,22 +13,16 @@ function setDefaultChar() {
 }
 
 const char = setDefaultChar();
-console.log(char);
 
-function changeFace(faceReq) {
-  char.face = `/${faceReq}`
-  document
-}
-function changeBeard(beardReq) {
-  if (removeURL(oldBeard) == `/${beardReq}`) {
-    return console.log("selected");
-  }
-}
-
-function setFace(faceReq) {
-  if (removeURL(char.face) == `/${faceReq}`) {
-    return console.log("selected");
+function setFace(type, newAtribute) {
+  console.log(char.face, newAtribute, type)
+  if (type == "face") {
+    char.changeAtribute(char.face, newAtribute, type);
   } else {
-    changeFace(faceReq);
+    char.changeAtribute(char.beard, newAtribute, type);
   }
-}
+};
+
+setFace("face", "assets/face2.png");
+
+// console.log(char.face, document.querySelector("#main-image"));

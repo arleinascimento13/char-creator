@@ -4,4 +4,14 @@ export default class Char {
     this.beard = beard;
     this.glass = glass;
   }
+
+  selectAtribute(oldInfo, req) {
+    if (oldInfo == `/${req}`) {
+      return console.log("already selected");
+    }
+  }
+
+  changeAtribute(dir, , faceOrBeard) {
+
+  }
 }
