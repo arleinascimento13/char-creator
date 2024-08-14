@@ -49,3 +49,9 @@ body {
 .image-style-button {
   max-width: 60px;
 }
+
+.send-button{
+  margin-top: 50px;
+  width: 80px;
+  height: 30px;
+}

@@ -1,4 +1,5 @@
 import Char from "./funcs/constructorChar.js";
+import logObj from "./funcs/logObj.js";
 import removeURL from "./funcs/urlRemover.js";
 
 function setDefaultChar() {
@@ -30,5 +31,9 @@ document.addEventListener("click", function (event) {
     const src = img.getAttribute("src");
     const alt = img.getAttribute("alt");
     return setFace(alt, src);
+  }
+  const buttonSend = event.target.closest(".send-button");
+  if (buttonSend) {
+    console.log(logObj(char));
   }
 });

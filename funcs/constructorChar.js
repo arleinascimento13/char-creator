@@ -1,10 +1,13 @@
 import removeURL from "./urlRemover.js";
 
+// if user.character > 4
+// cannot create
+
 export default class Char {
   constructor(head, beard, glass) {
     this.face = head;
     this.beard = beard;
-    this.glass = glass;
+    // this.glass = glass;
   }
 
   selectAtribute(oldInfo, req) {
@@ -19,5 +22,7 @@ export default class Char {
     } else {
       this.beard.src = newAtribute;
     }
+
+    console.log(removeURL(this.face.src), removeURL(this.beard.src));
   }
 }
