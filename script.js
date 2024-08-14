@@ -1,8 +1,6 @@
 import Char from "./funcs/constructorChar.js";
 import removeURL from "./funcs/urlRemover.js";
 
-
-
 function setDefaultChar() {
   const char = new Char();
   let oldFace = document.querySelector("#main-image");
@@ -24,3 +22,13 @@ function setFace(type, newAtribute) {
   }
 }
 
+document.addEventListener("click", function (event) {
+  const button = event.target.closest(".style-button");
+  if (button && button.closest(".container")) {
+    const img = button.querySelector(".image-style-button");
+
+    const src = img.getAttribute("src");
+    const alt = img.getAttribute("alt");
+    return setFace(alt, src);
+  }
+});
