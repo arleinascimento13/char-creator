@@ -12,12 +12,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-#image-container img {
+#main-image {
   max-width: 100%;
   max-height: 100%;
+  position: absolute;
 }
-.face-container {
+#beard-image {
+  top: 170px;
+  max-width: 70%;
+  max-height: 70%;
+  position: absolute;
+}
+.face-container,
+.beard-container {
   margin-top: 20px;
 }
 .style-button {
@@ -26,16 +35,18 @@ body {
   background: none;
   cursor: pointer;
 }
-.face-button img {
+.face-button img,
+.beard-button img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   border: 2px solid #ccc;
   transition: border-color 0.3s;
 }
-.face-button img:hover {
+.face-button img:hover,
+.beard-button img:hover {
   border-color: #000;
 }
-.image-style-button{
-     max-width: 60px;
+.image-style-button {
+  max-width: 60px;
 }

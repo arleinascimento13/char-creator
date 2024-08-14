@@ -11,32 +11,34 @@
 
     <div id="image-container">
       <img id="main-image" src="" alt="Imagem Principal" />
+      <img id="beard-image" src="" alt="Barba" />
     </div>
 
     <div class="face-container">
-      <button class="style-button" onclick="changeFace('assets/face1.webp')">
+      <button class="style-button" onclick="setFace('assets/face1.webp')">
         <img src="/assets/face1.webp" class="image-style-button" />
       </button>
-      <button class="style-button" onclick="changeFace('assets/face2.png')">
+      <button class="style-button" onclick="setFace('assets/face2.png')">
         <img src="/assets/face2.png" class="image-style-button" />
       </button>
-      <button class="style-button" onclick="changeFace('assets/face3.png')">
+      <button class="style-button" onclick="setFace('assets/face3.png')">
         <img src="/assets/face3.png" class="image-style-button" />
       </button>
     </div>
 
     <div class="beard-container">
-      <button class="style-button" onclick="changeBeard(barba1)">
+      <button class="style-button" onclick="changeBeard('assets/beard1.png')">
         <img src="/assets/beard1.png" class="image-style-button" />
       </button>
-      <button class="style-button" onclick="changeBeard(barba2)">
+      <button class="style-button" onclick="changeBeard('assets/beard2.png')">
         <img src="/assets/beard2.png" class="image-style-button" />
       </button>
-      <button class="style-button" onclick="changeBeard(barba3)">
+      <button class="style-button" onclick="changeBeard('assets/beard3.png')">
         <img src="/assets/beard3.png" class="image-style-button" />
       </button>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js">
+    </script>
   </body>
 </html>
